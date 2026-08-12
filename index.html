@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AURA - Fine Artisanal Jewellery & Royal Gemstones. Discover handcrafted 18K & 22K gold, certified solitaire diamonds, and rare Colombian emeralds.">
+    <meta name="keywords" content="jewelry, gold ring, diamond necklace, emerald choker, royal bangles, luxury watch, handcrafted jewelry">
+    <title>AURA | Fine Artisanal Jewellery & Royal Gemstones</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <span>✨ Complimentary Express Worldwide Shipping & BIS 916 Hallmarked Gold | Customer Concierge: +91 98765 43210</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="logo-link">
+                    <span class="logo-emblem">✦</span>
+                    <span class="logo-text">AURA</span>
+                    <span class="logo-subtext">HAUTE JOAILLERIE</span>
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active" data-target="home">Home</a>
+                <a href="#catalog" class="nav-link" data-target="catalog">Collections</a>
+                <a href="#about" class="nav-link" data-target="about">About Us</a>
+                <a href="#contact" class="nav-link" data-target="contact">Contact Us</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" id="global-search" placeholder="Search diamonds, emeralds, rings..." aria-label="Search Products">
+                    <button class="search-btn" title="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                </div>
+
+                <button class="wishlist-btn" id="wishlist-trigger" title="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span class="badge" id="wishlist-count">0</span>
+                </button>
+
+                <button class="cart-btn" id="cart-trigger" title="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="badge" id="cart-count">0</span>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="page-section active">
+            <!-- Hero Banner -->
+            <div class="hero-container">
+                <div class="hero-image-overlay">
+                    <img src="assets/images/hero.jpg" alt="AURA Luxury Jewellery Collection" class="hero-img">
+                </div>
+                <div class="hero-content">
+                    <span class="hero-badge">ROYAL GEMSTONE COLLECTION 2026</span>
+                    <h1 class="hero-title">Timeless Elegance, Handcrafted Royal Gems</h1>
+                    <p class="hero-subtitle">Bespoke 18K & 22K Gold, Certified Solitaire Diamonds, and Rare Colombian Emeralds forged by master artisans.</p>
+                    <div class="hero-cta-group">
+                        <button class="btn btn-gold" onclick="switchPage('catalog')">Explore Collections</button>
+                        <a href="https://wa.me/919876543210?text=Hello%20AURA%20Jewellery,%20I%20would%20like%20to%20inquire%20about%20custom%20bespoke%20jewellery." target="_blank" class="btn btn-outline-gold">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            WhatsApp Bespoke Inquiry
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Badges Bar -->
+            <div class="trust-bar">
+                <div class="trust-item">
+                    <span class="trust-icon">✦</span>
+                    <div>
+                        <h4>BIS 916 Hallmarked</h4>
+                        <p>100% Certified Pure Gold & Platinum</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">💎</span>
+                    <div>
+                        <h4>GIA Certified Diamonds</h4>
+                        <p>Ethically Sourced Conflict-Free Gems</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">📦</span>
+                    <div>
+                        <h4>Insured Express Shipping</h4>
+                        <p>Complimentary Global Delivery</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🛡️</span>
+                    <div>
+                        <h4>Lifetime Warranty</h4>
+                        <p>Free Cleaning & Exchange Guarantee</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Categories Highlights -->
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="sub-heading">CURATED SELECTIONS</span>
+                    <h2 class="section-title">Discover Our Fine Categories</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="category-grid">
+                    <div class="category-card" onclick="filterByCategory('Rings')">
+                        <img src="assets/images/ring-diamond.jpg" alt="Solitaire Rings">
+                        <div class="cat-overlay">
+                            <h3>Solitaire Rings</h3>
+                            <p>18K Yellow & White Gold</p>
+                        </div>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('Necklaces')">
+                        <img src="assets/images/necklace-emerald.jpg" alt="Emerald & Diamond Necklaces">
+                        <div class="cat-overlay">
+                            <h3>Royal Necklaces</h3>
+                            <p>Colombian Emeralds & Diamonds</p>
+                        </div>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('Bangles')">
+                        <img src="assets/images/bangles-gold.jpg" alt="Gold Bangles">
+                        <div class="cat-overlay">
+                            <h3>Heritage Bangles</h3>
+                            <p>22K Artisanal Polki Gold</p>
+                        </div>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('Pearls')">
+                        <img src="assets/images/choker-pearl.jpg" alt="Pearls & Sapphires">
+                        <div class="cat-overlay">
+                            <h3>Tahitian Pearls</h3>
+                            <p>Blue Sapphire Pendants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Sellers Spotlight Grid -->
+            <div class="section-container bg-dark-accent">
+                <div class="section-header">
+                    <span class="sub-heading">MOST COVETED PIECES</span>
+                    <h2 class="section-title">Royal Best Sellers</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="products-grid" id="home-bestsellers-grid">
+                    <!-- Populated dynamically by JS -->
+                </div>
+            </div>
+
+            <!-- Artisan Craftsmanship Showcase -->
+            <div class="craft-story-banner">
+                <div class="craft-content">
+                    <span class="sub-heading">OUR HERITAGE</span>
+                    <h2>Forged By Master Royal Goldsmiths</h2>
+                    <p>Every piece in our atelier undergoes over 120 hours of handcrafted precision, selecting only VVS clarity diamonds and vivid emerald gems to ensure a legacy that lasts generations.</p>
+                    <button class="btn btn-gold" onclick="switchPage('about')">Our Artisanal Story</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOG / PRODUCTS SECTION -->
+        <section id="catalog" class="page-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="sub-heading">EXPLORE HAUTE JOAILLERIE</span>
+                    <h2 class="section-title">The Complete Jewelry Catalog</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls">
+                    <div class="category-pills" id="category-pills">
+                        <button class="pill active" data-category="All">All Items</button>
+                        <button class="pill" data-category="Rings">Rings</button>
+                        <button class="pill" data-category="Necklaces">Necklaces</button>
+                        <button class="pill" data-category="Bangles">Bangles & Bracelets</button>
+                        <button class="pill" data-category="Pearls">Pearls & Chokers</button>
+                        <button class="pill" data-category="Watches">Luxury Watches</button>
+                    </div>
+
+                    <div class="sort-controls">
+                        <select id="sort-select" aria-label="Sort Products">
+                            <option value="featured">Sort by: Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Main Products Grid -->
+                <div class="products-grid" id="catalog-products-grid">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="page-section">
+            <div class="section-container">
+                <div class="about-hero">
+                    <div class="about-text">
+                        <span class="sub-heading">SINCE 1984</span>
+                        <h2>A Legacy of Uncompromising Brilliance</h2>
+                        <p class="lead-text">Founded in the heart of high jewelry crafting, AURA represents the pinnacle of artisanal craftsmanship, combining royal heritage aesthetics with modern ethical gemology.</p>
+                        <p>Each gemstone is individually hand-selected by our master gemologists. We adhere strictly to the Kimberley Process, guaranteeing 100% ethically sourced, conflict-free diamonds and metals certified by GIA, IGI, and BIS 916 Hallmarking.</p>
+                    </div>
+                    <div class="about-image-card">
+                        <img src="assets/images/hero.jpg" alt="AURA Craftsmanship">
+                    </div>
+                </div>
+
+                <!-- Values Grid -->
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-number">01</div>
+                        <h3>Ethical Sourcing</h3>
+                        <p>We source raw gemstones directly from certified sustainable mines in Colombia, Sri Lanka, and South Africa.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-number">02</div>
+                        <h3>Bespoke Customization</h3>
+                        <p>Work directly with our lead artisans to craft custom engagement rings, bridal sets, and engraved heirlooms.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-number">03</div>
+                        <h3>Lifetime Buyback Guarantee</h3>
+                        <p>We stand firmly by our purity. Enjoy 100% lifetime value exchange and complimentary annual jewelry polishing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US SECTION -->
+        <section id="contact" class="page-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="sub-heading">GET IN TOUCH</span>
+                    <h2 class="section-title">Visit Our Flagship Boutique</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h3>Flagship Showroom & Concierge</h3>
+                        <p>Schedule a private luxury consultation with our master gemologists or inquire about bespoke commissions.</p>
+                        
+                        <div class="contact-detail">
+                            <span class="detail-icon">📍</span>
+                            <div>
+                                <h4>Boutique Address</h4>
+                                <p>Suite 804, Royal Heritage Arcade, High Street, Mumbai, Maharashtra 400001</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <h4>VIP Customer Line</h4>
+                                <p>+91 98765 43210 / +91 22 8765 4321</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">✉️</span>
+                            <div>
+                                <h4>Concierge Email</h4>
+                                <p>concierge@aurajewellery.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">💬</span>
+                            <div>
+                                <h4>WhatsApp Instant Order Support</h4>
+                                <p><a href="https://wa.me/919876543210" target="_blank" class="gold-link">+91 98765 43210 (Click to Chat)</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <h3>Send a Private Inquiry</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" placeholder="e.g. Lady Victoria" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" placeholder="e.g. victoria@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number *</label>
+                                <input type="tel" id="contact-phone" placeholder="e.g. +91 9876543210" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-interest">Interest Category</label>
+                                <select id="contact-interest">
+                                    <option value="Bespoke Custom Ring">Bespoke Custom Ring</option>
+                                    <option value="Bridal Collection Inquiry">Bridal Collection Inquiry</option>
+                                    <option value="Emerald / Gemstone Consultation">Emerald / Gemstone Consultation</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message *</label>
+                                <textarea id="contact-message" rows="4" placeholder="Tell us about your desired design or inquiry..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gold w-100">Send Private Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="modal-backdrop" id="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Dynamically filled by app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOPPING CART SLIDE-OVER DRAWER -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Shopping Bag (<span id="cart-drawer-count">0</span>)</h3>
+            <button class="cart-close" id="cart-close-btn">&times;</button>
+        </div>
+
+        <div class="cart-items-list" id="cart-items-container">
+            <!-- Dynamically populated cart items -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="promo-box">
+                <input type="text" id="promo-input" placeholder="Promo Code (Try AURA10)">
+                <button id="apply-promo-btn" class="btn-sm">Apply</button>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount</span>
+                    <span id="cart-discount" class="text-gold">-$0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Insured Shipping</span>
+                    <span class="text-green">FREE</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total Amount</span>
+                    <span id="cart-total">$0</span>
+                </div>
+            </div>
+
+            <button class="btn btn-whatsapp w-100" id="whatsapp-checkout-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                Checkout via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-text">AURA</div>
+                <div class="logo-subtext">HAUTE JOAILLERIE</div>
+                <p class="footer-desc">Crafting timeless royal heirlooms with certified gold, brilliant diamonds, and ethical gemstones since 1984.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="#catalog" onclick="filterByCategory('Rings')">Solitaire Rings</a></li>
+                    <li><a href="#catalog" onclick="filterByCategory('Necklaces')">Royal Necklaces</a></li>
+                    <li><a href="#catalog" onclick="filterByCategory('Bangles')">Heritage Gold Bangles</a></li>
+                    <li><a href="#catalog" onclick="filterByCategory('Pearls')">Tahitian Pearls</a></li>
+                    <li><a href="#catalog" onclick="filterByCategory('Watches')">Luxury Timepieces</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#contact">Private Boutique Appointment</a></li>
+                    <li><a href="#contact">Ring Sizing Guide</a></li>
+                    <li><a href="#about">GIA & BIS Certification</a></li>
+                    <li><a href="#contact">Insured Shipping Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>VIP Newsletter</h4>
+                <p>Subscribe for exclusive access to private collection previews.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" id="newsletter-email">
+                    <button class="btn-sm btn-gold" onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AURA Fine Artisanal Jewellery. All Rights Reserved. | Handcrafted with Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
